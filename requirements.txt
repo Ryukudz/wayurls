@@ -1,0 +1,5 @@
+argparse
+requests
+json
+urllib3
+rich
