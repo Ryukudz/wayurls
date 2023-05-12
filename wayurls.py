@@ -1,17 +1,14 @@
 import argparse
 import requests
 import json
-from urllib.parse import urlparse
+from urllib.parse import urlparse, unquote
 from rich import print
 
-print('''[bold red] ▄▀▀▄    ▄▀▀▄  ▄▀▀█▄   ▄▀▀▄ ▀▀▄  ▄▀▀▄ ▄▀▀▄  ▄▀▀▄▀▀▀▄  ▄▀▀▀▀▄     ▄▀▀▀▀▄ 
-█   █    ▐  █ ▐ ▄▀ ▀▄ █   ▀▄ ▄▀ █   █    █ █   █   █ █    █     █ █   ▐ 
-▐  █        █   █▄▄▄█ ▐     █   ▐  █    █  ▐  █▀▀█▀  ▐    █        ▀▄   
-  █   ▄    █   ▄▀   █       █     █    █    ▄▀    █      █      ▀▄   █  
-   ▀▄▀ ▀▄ ▄▀  █   ▄▀      ▄▀       ▀▄▄▄▄▀  █     █     ▄▀▄▄▄▄▄▄▀ █▀▀▀   
-         ▀    ▐   ▐       █                ▐     ▐     █         ▐      
-                          ▐                            ▐            ''')
-print("\t\t\t[blue] coded by [link=https://ryukudz.github.io/about/]ryuku[/link] 🥷")
+print('''[red]\t     _        _/ _
+\t|/|//_|/_//_///_\ 
+\t       _/         
+\t [white]coded by [cyan] ryuku 🥷
+''')
 
 parser = argparse.ArgumentParser(description='extracts URLs from the Wayback Machine 📚')
 parser.add_argument('-u', '--url', type=str, required=True, help='target URL e.g https://example.com')
@@ -53,6 +50,6 @@ if args.output:
         f.write('\n'.join(urls))
 else:
     for i, url in enumerate(urls, 1):
-        print(f'[green]{url}')
+        print(f'[green]{i}:[white] {unquote(url)}')
 
 print(f'{len(urls)} 🔗 URLs found.')
