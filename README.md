@@ -1,5 +1,5 @@
 # wayurls 🔗
-It's 2023, I came to the realization that I'm still manually browsing to https://archive.org/web/ typing and clicking through several pages x) so i wrote this tool in few minutes.
+It's 2023, I came to the realization that I'm still manually browsing to [the wayback machine](https://archive.org/web/) typing and clicking through several pages x)
 
 # Features
 - filter by extension
