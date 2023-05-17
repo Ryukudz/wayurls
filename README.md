@@ -4,6 +4,7 @@ It's 2023, I came to the realization that I'm still manually browsing to https:/
 # Features
 - filter by extension
 - filter by directory
+- URL decode
 # Installation 🤓
 ```sh
 git clone https://github.com/Ryukudz/wayurls.git
@@ -16,7 +17,7 @@ python3 wayurls.py -h
 ```
 This will display help for the tool, Here are all the switches it supports.
 ```yaml
-usage: wayurls.py [-h] -u URL [-o OUTPUT] [-f {js,param,txt,json}] [-d DIRECTORY]
+usage: wayup.py [-h] -u URL [-o OUTPUT] [-f {js,param,txt,json}] [-d DIRECTORY] [--decode]
 
 extracts URLs from the Wayback Machine 📚
 
@@ -29,4 +30,5 @@ options:
                         Filter the output by file extension e.g js
   -d DIRECTORY, --directory DIRECTORY
                         Filter the output by directory e.g admin
+  --decode              URL decode the output.
 ```
